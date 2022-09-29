@@ -49,7 +49,7 @@ for xd in range(10000):
 
     aa='Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_1 like Mac OS X)'
     b=random.choice(['8','9','10','11','12'])
-    c='en-US; V2141 Build/SP1A.210812.003'
+    c=''
     d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
     e=random.randrange(1, 999)
     f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
