@@ -181,7 +181,7 @@ def banner():
 	clear()
 	print("""%s   
    
-, ＜￣｀ヽ　%sTOD-MEK%s　／￣＞
+, ＜￣｀ヽ　%sPIXI%s　／￣＞
 　ゝ、　　＼　／⌒ヽ,ノ 　/´
 　　　ゝ、　`（ ( ͡° ͜ʖ ͡°) ／
 　　 　　>　 　 　,)
