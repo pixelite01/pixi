@@ -498,7 +498,7 @@ def crackfree(idf,pwv):
 	pers = loop*100/len(id2)
 	fff = '%'
 	print('\r%s%s/%s ok:%s/cp:%s %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
-	ua = random.choice(ugen)
+	ua = 'Mozilla/5.0 (Linux; U; Android 18; zh-CN; MZ-meizu 17 Bui ld/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.7.6 787.(756 MZBrowser/9.14.1 Mobile Safari/537.3635 Build/VPX97E) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.6813.80 Mobile Safari/537.36 HeyTapBrowser/27.7.36.1'
 	ua2 = random.choice(ugen)
 	ses = requests.Session()
 	for pw in pwv:
