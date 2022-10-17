@@ -34,7 +34,7 @@ except Exception as e:
 for xd in range(10000):
     rr = random.randint
     rc = random.choice
-    A = f'Mozilla/5.0 (Linux; Android {str(rr(8,10))}; Redmi {str(rr(4,9))} Build/PPR1.'
+    A = f'Mozilla/5.0 (Linux; Android {str(rr(8,10))}; Redmi {str(rr(4,11))} Build/PPR1.'
     B = f'{str(rr(111111,199999))}.011; en-us) AppleWebKit/537.36 '
     C = f'(KHTML, like Gecko) UCBrowser/79.0.{str(rr(1111,9999))}.136 Mobile Safari'
     D = f'/537.36 Puffin/9.7.2.{str(rr(11111,99999))}AP'
