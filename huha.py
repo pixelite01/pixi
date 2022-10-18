@@ -1208,7 +1208,7 @@ def passwer():
 		
 def mobile(uiz,pwr,link_okep):
 	global ok,cp,HikmatXD
-	ua = random.choice(ua_crack1)
+	ua = random.choice(ua_crack)
 	ses = requests.Session()
 	c_pw = len(pwr)
 	runc= random.choice([K,M,U,O,B,H]) 
