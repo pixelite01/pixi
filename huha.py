@@ -51,7 +51,7 @@ for xd in range(10000):
 	k=random.randrange(40,150)
 	l='Mobile Safari/537.36'
 	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-	ua_crack1.append(uaku2)
+	ua_crack.append(uaku2)
 
 for xyzx in range(1000):
 	rr = random.randint
