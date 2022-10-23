@@ -611,7 +611,7 @@ def crackmbasic(idf,pwv):
 	global loop,ok,cp
 	prog.update(des,description=f"[white]crack {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
 	prog.advance(des)
-	ua = random.choice(ugen2)
+	ua = random.choice(redmi)
 	ses = requests.Session()
 	for pw in pwv:
 		try:
